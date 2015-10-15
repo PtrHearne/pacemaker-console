@@ -3,6 +3,8 @@ package models;
 import static com.google.common.base.MoreObjects.toStringHelper;
 import com.google.common.base.Objects;
 
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class User
@@ -13,12 +15,9 @@ public class User
     public String email;
     public String password;
     public Long   id;
+    public Map<Long, Activity> activities = new HashMap<>();
 
 
-
-    public User()
-    {
-    }
 
     public User(String firstName, String lastName, String email, String password)
     {
